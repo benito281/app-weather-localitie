@@ -64,7 +64,7 @@ selectDepartments.addEventListener('change', async () => {
 selectLocalities.addEventListener('change', function(e){
     e.preventDefault();
     let localitieSelected = (e.target.value).toLowerCase();
-    viewInformation(weatherInformation(localitieSelected, 'c65e070d8c831edc8f57b3eba86a147f'));
+    viewInformation(weatherInformation(localitieSelected, /* Api Key */));
     
 })
 
