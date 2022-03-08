@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select dinamico</title>
+    <link rel="stylesheet" href="assets/css/mdb.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="container py-4">
+        <div class="card mx-auto">
+            <div class="card-header">
+                <h2 class="text-center">Estado del clima segun tu localidad</h2>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="provinces" class="text-primary text-uppercase">Provincia</label>
+                    <select class="form-select" aria-label="Default select example" id="provinces">
+                        <!-- Provinces -->
+                      </select>
+                </div>
+                <div class="form-group my-2">
+                    <label for="departments" class="text-primary text-uppercase">Departamento</label>
+                    <select class="form-select" aria-label="Default select example" id="departments">
+                        <!-- Departments -->
+                      </select>
+                </div>
+                <div class="form-group my-2">
+                    <label for="localities" class="text-primary text-uppercase">Localidad</label>
+                    <select class="form-select" aria-label="Default select example" id="localities">
+                        <!-- localities -->
+                      </select>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="weather-localities"></div>
+    
+    <script src="assets/js/mdb.min.js"></script>
+    <script src="assets/js/sweetalert2.min.js"></script>
+    <script src="assets/js/main.js" type="module"></script>
+</body>
+</html>
