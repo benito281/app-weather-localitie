@@ -1,4 +1,5 @@
 let weather = document.getElementById("weather-localities");
+/*Estados del clima en español  */
 const mainDict = {
     Thunderstorm: 'Tormenta',
     Drizzle: 'Llovizna',
@@ -16,7 +17,7 @@ const mainDict = {
     Clear: 'Despejado',
     Clouds: 'Nubes',
   }
-
+/* Obtener información */
 export const weatherInformation = async (localitie,apiKey) => {
   try {
     let url = `http://api.openweathermap.org/data/2.5/weather?q=${localitie}&appid=${apiKey}`;
@@ -28,23 +29,24 @@ export const weatherInformation = async (localitie,apiKey) => {
   }
 }
 
+/* Mostrar alerta y la información seleccionada */
 export const viewInformation = async (func) => {
   let localitie = await func;
-  if (localitie.cod === '404') {
+  if (localitie.cod === 404) {
     Swal.fire({
       icon: 'warning',
       title: 'Error',
       text: '¡No se encontro la localidad seleccionada!',
     });
   }
-  if (localitie === false) {
+ if (localitie === false) {
     Swal.fire({
       icon: 'error',
       title: 'Error fatal',
       text: '¡No hay registros del clima de la localidad seleccionada!',
     });
   }
-  else{ 
+
   return weather.innerHTML = `
   <div class="card mx-auto mb-4 w-75">
   <div class="card-header">
@@ -79,6 +81,5 @@ export const viewInformation = async (func) => {
    </table>
 </div>
 </div>
-  `;
-  }
+  `
 }

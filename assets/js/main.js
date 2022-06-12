@@ -1,16 +1,20 @@
 import { weatherInformation, viewInformation } from './weather.js';
+
 let url = 'assets/json/';
+const apiKEY = null; //Cambiar la variable null, por la APIKEY 
 let selectProvinces = document.querySelector('#provinces');
 let selectDepartments = document.querySelector('#departments');
 let optionsSelect, element,idProvince, idDepartments;
 let selectLocalities = document.querySelector('#localities');
 
 
+/*Obtenemos las provincias, departamentos y localidades desde los archivos */
 const getProvinces = async () => {
     let response = await fetch(url + 'provincias.json');
     let result = await response.json();
     return result.provincias;
 }
+
 const getDepartments = async () => {
     let response = await fetch(url + 'departamentos.json');
     let result = await response.json();
@@ -64,7 +68,8 @@ selectDepartments.addEventListener('change', async () => {
 selectLocalities.addEventListener('change', function(e){
     e.preventDefault();
     let localitieSelected = (e.target.value).toLowerCase();
-    viewInformation(weatherInformation(localitieSelected, /* Api Key */));
+    console.log(localitieSelected)
+    viewInformation(weatherInformation(localitieSelected, '0d388978e8307deeb14601e6ea55d3ca'));
     
 })
 
