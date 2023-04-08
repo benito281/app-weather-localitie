@@ -21,7 +21,10 @@ npm run dev
 * Execute project to production
 ```
 npm run build
-npm start
+```
+* Preview project
+```
+npm run preview
 ```
 
 ![](docs/img-1.jpg);
