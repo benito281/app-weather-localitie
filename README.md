@@ -27,7 +27,7 @@ npm run build
 npm run preview
 ```
 
-![](docs/img-1.jpg);
-![](docs/img-2.jpg);
+![](docs/img-1.jpg)
+![](docs/img-2.jpg)
 
 
